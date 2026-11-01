@@ -1,0 +1,197 @@
+
+/* ==============================
+   SMARTPREP AI - JOB ROLE PAGE
+================================ */
+
+.role-page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 55px 6%;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(128, 85, 238, 0.18), transparent 32%),
+    radial-gradient(circle at 90% 85%, rgba(71, 125, 245, 0.15), transparent 32%),
+    #080d1b;
+  color: #f5f6ff;
+  font-family: Inter, "Segoe UI", sans-serif;
+}
+
+.role-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Back button */
+
+.back-btn {
+  padding: 10px 17px;
+  margin-bottom: 48px;
+  border: 1px solid rgba(174, 187, 220, 0.2);
+  border-radius: 9px;
+  background: rgba(19, 27, 48, 0.8);
+  color: #c5cde0;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  border-color: #a994ff;
+  color: white;
+  background: rgba(128, 85, 238, 0.15);
+}
+
+/* Heading */
+
+.role-container .section-label {
+  display: inline-block;
+  margin-bottom: 17px;
+  color: #a994ff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.role-container h1 {
+  margin-bottom: 17px;
+  font-size: clamp(34px, 5vw, 49px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.role-description {
+  max-width: 650px;
+  margin-bottom: 45px;
+  color: #9ba8c1;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Role cards */
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.role-card {
+  position: relative;
+  min-height: 190px;
+  padding: 27px;
+  overflow: hidden;
+  text-align: left;
+  border: 1px solid rgba(174, 187, 220, 0.15);
+  border-radius: 17px;
+  background: rgba(19, 27, 48, 0.82);
+  color: #f5f6ff;
+  backdrop-filter: blur(15px);
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.role-card::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  top: -75px;
+  right: -65px;
+  border-radius: 50%;
+  background: rgba(128, 85, 238, 0.18);
+  filter: blur(25px);
+  transition: 0.25s;
+}
+
+.role-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(166, 138, 255, 0.65);
+  background: #18213a;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.role-card:hover::before {
+  background: rgba(71, 125, 245, 0.3);
+}
+
+.role-card > span {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(166, 138, 255, 0.25);
+  border-radius: 13px;
+  background: linear-gradient(
+    135deg,
+    rgba(128, 85, 238, 0.2),
+    rgba(71, 125, 245, 0.16)
+  );
+  font-size: 23px;
+}
+
+.role-card h3 {
+  position: relative;
+  margin-bottom: 9px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.role-card p {
+  position: relative;
+  color: #8e9bb5;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Keyboard accessibility */
+
+.back-btn:focus-visible,
+.role-card:focus-visible {
+  outline: 2px solid #a994ff;
+  outline-offset: 4px;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+  .role-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .role-page {
+    padding: 30px 20px;
+  }
+
+  .back-btn {
+    margin-bottom: 35px;
+  }
+
+  .role-container h1 {
+    font-size: 34px;
+  }
+
+  .role-description {
+    font-size: 13px;
+    margin-bottom: 30px;
+  }
+
+  .role-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .role-card {
+    min-height: 155px;
+    padding: 23px;
+  }
+}

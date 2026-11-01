@@ -1,0 +1,185 @@
+
+/* =================================
+   SMARTPREP AI - PROFILE PAGE
+================================= */
+
+.profile-page {
+  min-height: 100vh;
+  padding: 110px 20px 50px;
+  background:
+    radial-gradient(circle at 15% 10%, #252052 0, transparent 35%),
+    radial-gradient(circle at 85% 80%, #102b50 0, transparent 35%),
+    #080d1b;
+  color: #ffffff;
+}
+
+.profile-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.profile-heading {
+  margin-bottom: 30px;
+}
+
+.profile-heading h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.profile-heading p {
+  color: #a6aec4;
+  font-size: 15px;
+}
+
+.profile-form {
+  padding: 30px;
+  border: 1px solid rgba(151, 130, 255, 0.2);
+  border-radius: 18px;
+  background: rgba(19, 27, 48, 0.85);
+  backdrop-filter: blur(15px);
+}
+
+.profile-form h2 {
+  font-size: 19px;
+  margin: 25px 0 18px;
+  color: #c5b5ff;
+}
+
+.profile-form h2:first-child {
+  margin-top: 0;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.profile-field label {
+  color: #dce2f3;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-field input,
+.profile-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #303b59;
+  border-radius: 9px;
+  outline: none;
+  background: #0d1528;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus {
+  border-color: #8b68ff;
+  box-shadow: 0 0 0 3px rgba(139, 104, 255, 0.12);
+}
+
+.profile-field input::placeholder,
+.profile-field textarea::placeholder {
+  color: #77829d;
+}
+
+.profile-field input:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.profile-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.profile-save-btn {
+  margin-top: 15px;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 9px;
+  background: linear-gradient(110deg, #8055ee, #477df5);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.profile-save-btn:hover {
+  transform: translateY(-2px);
+}
+
+.profile-save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile-message {
+  margin-top: 15px;
+  color: #a9c9ff;
+  font-size: 14px;
+}
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+  .profile-page {
+    padding: 100px 14px 35px;
+  }
+
+  .profile-form {
+    padding: 20px;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .profile-heading h1 {
+    font-size: 27px;
+  }
+
+  .profile-save-btn {
+    width: 100%;
+  }
+}
+.profile-error {
+  color: #ff8585;
+}
+
+.profile-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.profile-navigation button {
+  padding: 12px 16px;
+  border: 1px solid #394767;
+  border-radius: 9px;
+  background: #131b30;
+  color: white;
+  cursor: pointer;
+}
+
+.profile-navigation button:hover {
+  border-color: #8b68ff;
+}
